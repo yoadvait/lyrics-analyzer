@@ -4,3 +4,4 @@ lyricsgenius
 joblib
 numpy
 pandas
+nltk
