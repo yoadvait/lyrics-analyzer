@@ -2,6 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import requests
 import pandas as pd
+import re
 
 client_id = "de68ee68278e466d82ae18ebade5ce7e"
 client_secret = "8c0b96f3f3854e8cb352c8cdae666520"
@@ -30,7 +31,10 @@ def get_lyrics(track_name, artist_name):
         lyrics_data = lyrics_response.json()
         
         if 'lyrics' in lyrics_data['message']['body']:
-            return lyrics_data['message']['body']['lyrics']['lyrics_body']
+            lyrics = lyrics_data['message']['body']['lyrics']['lyrics_body']
+            
+            lyrics = re.split(r"\n\*+ This Lyrics is NOT for Commercial use \*+\n|\(\d+\)$", lyrics)[0]
+            return lyrics.strip()
         else:
             return "No lyrics found."
     else:
