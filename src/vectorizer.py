@@ -1,10 +1,13 @@
+import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import joblib
 import re
 
-df = pd.read_csv('data/SingerAndSongs.csv')
+os.makedirs('models', exist_ok=True)
+
+df = pd.read_csv('data/SingerAndSongs_with_lyrics.csv')
 
 def clean_lyrics(lyrics):
     if isinstance(lyrics, str):
@@ -13,7 +16,6 @@ def clean_lyrics(lyrics):
         lyrics = re.sub(r'\s+', ' ', lyrics).strip()
         words = lyrics.split()
         return ' '.join(words)
-
     return ""
 
 df['clean_lyrics'] = df['lyrics'].apply(clean_lyrics)
