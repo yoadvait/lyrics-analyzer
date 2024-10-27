@@ -31,7 +31,7 @@ def predict_song_features(lyrics):
 if __name__ == "__main__":
     input_lyrics = """
 
-    "Song's Lyrics come here"
+O mehrma, kya mila Yun juda hoke bata O mehrama, kya mila Yun juda hoke bata Na khabar apni rahi Na khabar apni rahi Na raha tera pata O meherma, kya mila Yun juda hoke bata 
 
  """
     predictions = predict_song_features(input_lyrics)
