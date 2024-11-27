@@ -135,4 +135,8 @@ The Linear, Ridge, and Gradient Boosting models were evaluated, with Ridge and G
 
 ## Read More
 
+<<<<<<< HEAD
 Check out my blog on Hashnode - https://yoadvait.hashnode.dev/lyricsanalyzer-song-analysis-with-nlp
+=======
+Check out my blog on Hashnode - https://yoadvait.hashnode.dev/lyricsanalyzer-song-analysis-with-nlp
+>>>>>>> b2fdbb2 (Project Complete)
