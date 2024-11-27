@@ -8,13 +8,6 @@ from sklearn.metrics import mean_squared_error
 import numpy as np
 import re
 import requests
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-
-client_id = "de68ee68278e466d82ae18ebade5ce7e"
-client_secret = "8c0b96f3f3854e8cb352c8cdae666520"
-api_key = "31a518f4199f09a6f2a39f4c223346e3"
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
 
 # Load data
 df = pd.read_csv('data/SingerAndSongs.csv')
