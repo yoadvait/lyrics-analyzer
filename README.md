@@ -34,20 +34,18 @@ The trained models can predict these values based solely on lyrics, providing in
 ## Project Structure
 
 ```bash
-├── data/
-│   ├── SingerAndSongs.csv                  # Original dataset with song names and lyrics
-│   ├── SingerAndSongs_with_lyrics.csv      # Dataset with lyrics added
-│   ├── split_data.pkl                      # Train-test split data for modeling
+├── src/
+│   ├── predictor.py                        # Script to predict acoustic features from input lyrics
+│   ├── vectorizer.py                       # Script for lyrics preprocessing and vectorization
+│   ├── model_trainer(Linear+Others).py     # Model training script for each acoustic feature
 ├── models/
 │   ├── acousticness_model.pkl              # Trained model for acousticness prediction
 │   ├── danceability_model.pkl              # Trained model for danceability prediction
 │   ├── energy_model.pkl                    # Trained model for energy prediction
-│   └── tfidf_vectorizer.pkl                # TF-IDF vectorizer for lyric transformation
-├── predictor.py                            # Script to predict acoustic features from input lyrics
-├── model_trainer.py                        # Model training script for each acoustic feature
-├── vectorizer.py                           # Script for lyrics preprocessing and vectorization
-├── requirements.txt                        # Python package dependencies
-└── README.md                               # Project documentation
+├── testing.ipynb                           
+├── .gitignore                         
+├── requirements.txt
+└── README.md
 ```
 ## Dataset
 
@@ -131,12 +129,8 @@ The models have been tested using the RMSE metric, achieving the following resul
  - Danceability RMSE: 0.3982
  - Energy RMSE: 0.4611
    
-The Linear, Ridge, and Gradient Boosting models were evaluated, with Ridge and Gradient Boosting showing improvement over Linear Regression in some cases.
+The Linear, Ridge, and Gradient Boosting models were evaluated, with Ridge and Gradient Boosting showing improvement over Linear Regression.
 
 ## Read More
 
-<<<<<<< HEAD
 Check out my blog on Hashnode - https://yoadvait.hashnode.dev/lyricsanalyzer-song-analysis-with-nlp
-=======
-Check out my blog on Hashnode - https://yoadvait.hashnode.dev/lyricsanalyzer-song-analysis-with-nlp
->>>>>>> b2fdbb2 (Project Complete)
