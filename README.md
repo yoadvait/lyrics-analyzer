@@ -41,8 +41,7 @@ The trained models can predict these values based solely on lyrics, providing in
 ├── models/
 │   ├── acousticness_model.pkl              # Trained model for acousticness prediction
 │   ├── danceability_model.pkl              # Trained model for danceability prediction
-│   ├── energy_model.pkl                    # Trained model for energy prediction
-├── testing.ipynb                           
+│   ├── energy_model.pkl                    # Trained model for energy prediction                          
 ├── .gitignore                         
 ├── requirements.txt
 └── README.md
